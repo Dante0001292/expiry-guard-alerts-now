@@ -17,7 +17,7 @@ const plans = [
   },
   {
     name: "Standard",
-    price: "$15",
+    price: "$20",
     description: "Most popular for growing businesses",
     features: [
       "Unlimited products",

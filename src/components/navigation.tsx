@@ -31,18 +31,19 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Logo />
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="font-medium hover:text-brand-purple transition">Features</a>
-            <a href="#" className="font-medium hover:text-brand-purple transition">Pricing</a>
-            <a href="#" className="font-medium hover:text-brand-purple transition">About</a>
-            <a href="#" className="font-medium hover:text-brand-purple transition">Contact</a>
-          </nav>
-          
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="/signin" className="font-medium hover:text-brand-purple transition">Sign In</a>
-            <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
+          {/* Desktop Navigation - moved more to the right */}
+          <div className="hidden md:flex items-center justify-end flex-1">
+            <nav className="flex items-center space-x-8 mr-8">
+              <a href="#" className="font-medium hover:text-brand-purple transition">Features</a>
+              <a href="#" className="font-medium hover:text-brand-purple transition">Pricing</a>
+              <a href="#" className="font-medium hover:text-brand-purple transition">About</a>
+              <a href="#" className="font-medium hover:text-brand-purple transition">Contact</a>
+            </nav>
+            
+            <div className="flex items-center space-x-4">
+              <a href="/signin" className="font-medium hover:text-brand-purple transition">Sign In</a>
+              <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
+            </div>
           </div>
           
           {/* Mobile Menu Toggle */}

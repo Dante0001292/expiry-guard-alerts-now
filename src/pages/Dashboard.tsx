@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Logo } from "@/components/logo";
@@ -6,8 +5,10 @@ import { SidebarNav } from "@/components/dashboard/sidebar-nav";
 import { StatsCard } from "@/components/dashboard/stats-card";
 import { ExpiryTable } from "@/components/dashboard/expiry-table";
 import { NotificationPanel } from "@/components/dashboard/notification-panel";
-import { AlertTriangle, ArrowRight, BarChart3, Bell, Clock, Menu, Package, Search, User } from "lucide-react";
+import { AppIntegrations } from "@/components/dashboard/app-integrations";
+import { ArrowRight, BarChart3, Bell, Clock, Menu, Package, Search, User, AlertTriangle } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -66,13 +67,14 @@ export default function Dashboard() {
         <main className="flex-1 p-4 md:p-6 overflow-auto">
           <div className="flex flex-col gap-6">
             <div className="flex items-center justify-between">
-              <h1 className="text-2xl md:text-3xl font-bold">
-                Dashboard
-              </h1>
+              <h1 className="text-2xl md:text-3xl font-bold">Dashboard</h1>
               <Button className="bg-brand-purple hover:bg-brand-purple/90">
                 Add Product <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+
+            {/* App Integrations Section */}
+            <AppIntegrations />
 
             {/* Stats Grid */}
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -114,7 +116,6 @@ export default function Dashboard() {
   );
 }
 
-// Helper function for conditional classes
 function cn(...classes: (string | boolean | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
