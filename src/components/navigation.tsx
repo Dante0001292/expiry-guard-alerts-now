@@ -24,7 +24,7 @@ export function Navigation() {
   }, []);
   
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`md:fixed md:top-0 md:left-0 md:right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -72,7 +72,7 @@ export function Navigation() {
             <a href="#about" className="py-2 font-medium">About</a>
             <a href="#contact" className="py-2 font-medium">Contact</a>
             <div className="mt-4 flex flex-col space-y-2">
-              <a href="/signin" className="py-2 font-medium">Sign In</a>
+              <Link to="/signin" className="py-2 font-medium">Sign In</Link>
               <Link to="/signup">
                 <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
               </Link>

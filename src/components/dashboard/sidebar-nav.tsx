@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -14,6 +13,7 @@ import {
 
 interface SidebarNavProps {
   className?: string;
+  closeSidebar?: () => void;
 }
 
 interface NavItem {
@@ -65,7 +65,7 @@ const navItems: NavItem[] = [
   },
 ];
 
-export function SidebarNav({ className }: SidebarNavProps) {
+export function SidebarNav({ className, closeSidebar }: SidebarNavProps) {
   const location = useLocation();
   
   return (
@@ -80,6 +80,7 @@ export function SidebarNav({ className }: SidebarNavProps) {
               ? "bg-brand-purple text-white"
               : "hover:bg-muted"
           )}
+          onClick={closeSidebar}
         >
           <item.icon className="h-5 w-5" />
           <span>{item.title}</span>

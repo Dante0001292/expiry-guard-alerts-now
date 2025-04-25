@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function HeroSection() {
   // Carousel images and alt text
@@ -43,9 +44,11 @@ export function HeroSection() {
           </p>
           
           <div className="animate-fade-in animation-delay-200 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="bg-brand-purple hover:bg-brand-purple/90 text-white">
-              Start Free Trial
-            </Button>
+            <Link to="/signup">
+              <Button size="lg" className="bg-brand-purple hover:bg-brand-purple/90 text-white">
+                Start Free Trial
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="flex items-center gap-2">
               See How It Works <ArrowRight size={16} />
             </Button>
