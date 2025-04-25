@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Logo } from "@/components/logo";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserPlus } from "lucide-react";
 
 export default function SignUp() {
@@ -15,6 +15,8 @@ export default function SignUp() {
     company: ""
   });
   
+  const navigate = useNavigate();
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -24,6 +26,7 @@ export default function SignUp() {
     e.preventDefault();
     // In a real app, we would handle registration here
     console.log("Sign up with:", formData);
+    navigate("/dashboard");
   };
   
   return (
