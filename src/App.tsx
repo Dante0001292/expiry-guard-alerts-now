@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,10 @@ import Inventory from "./pages/Inventory";
 import ExpiryCalendar from "./pages/ExpiryCalendar";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
+import Categories from "./pages/Categories";
+import Reports from "./pages/Reports";
+import Users from "./pages/Users";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,10 @@ const App = () => (
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/calendar" element={<ExpiryCalendar />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

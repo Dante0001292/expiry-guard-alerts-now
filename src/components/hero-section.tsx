@@ -1,9 +1,22 @@
-
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
+  // Carousel images and alt text
+  const carouselImages = [
+    "/cyber-laptop.jpg",
+    "/cyber-lock.jpg",
+    "/cyber-abstract.jpg",
+  ];
+  const carouselAlts = [
+    "Cyber security themed laptop with code on screen",
+    "Cyber security lock symbol on keyboard",
+    "Abstract cyber security background with blue tones",
+  ];
+  const [currentImage, setCurrentImage] = useState(0);
+
   return (
     <div className="relative overflow-hidden">
       {/* Background with gradient */}
@@ -39,19 +52,14 @@ export function HeroSection() {
           </div>
         </div>
         
-        <div className="flex-1 relative animate-fade-in">
+        <div className="flex-1 relative animate-fade-in flex flex-col items-center justify-center">
+          {/* Real Dashboard Screenshot as Hero Image */}
           <img
-            src="/dashboard-preview.png"
-            alt="ExpiryGuard Dashboard"
-            className="rounded-xl shadow-2xl border border-gray-200"
+            src="/Screenshot 2025-04-25 165402.png"
+            alt="ExpiryGuard Dashboard Screenshot"
+            className="rounded-2xl shadow-2xl border border-gray-200 w-full max-w-2xl object-cover object-top"
+            style={{ minHeight: '320px', background: '#f6f8fa' }}
           />
-          <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl border border-gray-100 animate-fade-in animation-delay-300">
-            <img
-              src="/integrations-preview.png"
-              alt="Integration Options"
-              className="w-48 rounded"
-            />
-          </div>
         </div>
       </div>
     </div>

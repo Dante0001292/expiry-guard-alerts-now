@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,15 +34,17 @@ export function Navigation() {
           {/* Desktop Navigation - moved more to the right */}
           <div className="hidden md:flex items-center justify-end flex-1">
             <nav className="flex items-center space-x-8 mr-8">
-              <a href="#" className="font-medium hover:text-brand-purple transition">Features</a>
-              <a href="#" className="font-medium hover:text-brand-purple transition">Pricing</a>
-              <a href="#" className="font-medium hover:text-brand-purple transition">About</a>
-              <a href="#" className="font-medium hover:text-brand-purple transition">Contact</a>
+              <a href="#features" className="font-medium hover:text-brand-purple transition">Features</a>
+              <a href="#pricing" className="font-medium hover:text-brand-purple transition">Pricing</a>
+              <a href="#about" className="font-medium hover:text-brand-purple transition">About</a>
+              <a href="#contact" className="font-medium hover:text-brand-purple transition">Contact</a>
             </nav>
             
             <div className="flex items-center space-x-4">
               <a href="/signin" className="font-medium hover:text-brand-purple transition">Sign In</a>
-              <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
+              <Link to="/signup">
+                <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
+              </Link>
             </div>
           </div>
           
@@ -65,13 +67,15 @@ export function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 flex flex-col animate-fade-in">
-            <a href="#" className="py-2 font-medium">Features</a>
-            <a href="#" className="py-2 font-medium">Pricing</a>
-            <a href="#" className="py-2 font-medium">About</a>
-            <a href="#" className="py-2 font-medium">Contact</a>
+            <a href="#features" className="py-2 font-medium">Features</a>
+            <a href="#pricing" className="py-2 font-medium">Pricing</a>
+            <a href="#about" className="py-2 font-medium">About</a>
+            <a href="#contact" className="py-2 font-medium">Contact</a>
             <div className="mt-4 flex flex-col space-y-2">
               <a href="/signin" className="py-2 font-medium">Sign In</a>
-              <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
+              <Link to="/signup">
+                <Button className="bg-brand-purple hover:bg-brand-purple/90">Get Started</Button>
+              </Link>
             </div>
           </div>
         </div>

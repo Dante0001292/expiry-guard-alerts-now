@@ -1,10 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Logo } from "@/components/logo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Lock } from "lucide-react";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -17,24 +17,26 @@ export default function SignIn() {
   };
   
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-brand-purple/10 to-brand-teal/10 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center">
+          <span className="bg-brand-purple/10 rounded-full p-3 mb-2">
+            <Lock className="w-8 h-8 text-brand-purple" />
+          </span>
           <Logo size="large" />
         </div>
-        <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
+        <h2 className="mt-4 text-center text-3xl font-bold text-gray-900">
           Sign in to your account
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Or{" "}
+          Or{' '}
           <Link to="/signup" className="font-medium text-brand-purple hover:text-brand-purple/90">
             create a new account
           </Link>
         </p>
       </div>
-
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-white py-8 px-4 shadow-xl rounded-2xl sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <Label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -101,17 +103,12 @@ export default function SignIn() {
               </Button>
             </div>
           </form>
-
-          <div className="mt-6">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or continue with</span>
-              </div>
+          <div className="mt-8">
+            <div className="flex items-center justify-center">
+              <span className="w-1/5 border-t border-gray-300"></span>
+              <span className="mx-4 text-gray-400 text-xs">or sign in with</span>
+              <span className="w-1/5 border-t border-gray-300"></span>
             </div>
-
             <div className="mt-6 grid grid-cols-2 gap-3">
               <div>
                 <Button

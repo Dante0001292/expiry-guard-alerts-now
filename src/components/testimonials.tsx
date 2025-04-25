@@ -1,6 +1,5 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -28,16 +27,24 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+    <section id="about" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Decorative SVG background */}
+      <svg className="absolute left-0 top-0 w-full h-full opacity-10 pointer-events-none" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="200" cy="200" rx="180" ry="80" fill="#a78bfa" />
+        <ellipse cx="600" cy="100" rx="120" ry="60" fill="#5eead4" />
+      </svg>
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           Trusted by Businesses <span className="gradient-text">Like Yours</span>
         </h2>
-        
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          See how ExpiryGuard is helping real businesses save money, reduce waste, and stay compliant.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white">
+            <Card key={index} className="bg-white relative overflow-hidden">
               <CardContent className="pt-6">
+                <Quote className="absolute top-4 right-4 w-8 h-8 text-brand-purple/20" />
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
