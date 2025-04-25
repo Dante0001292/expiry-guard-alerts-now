@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# ExpiryGuard
 
-## Project info
+ExpiryGuard is a SaaS web application designed to help businesses automate expiry date management, reduce product waste, and optimize inventory. The platform provides smart alerts, FEFO/FIFO inventory management, automatic discounting, real-time analytics, and user/company management—all in a modern, responsive dashboard.
 
-**URL**: https://lovable.dev/projects/7d87371d-0e42-4e58-9c48-93b5748edb23
+## Features
+- Smart, customizable alerts for expiring products
+- FEFO/FIFO inventory management
+- Automatic discounting as products approach expiry
+- Real-time analytics and reporting
+- User and company management
+- Modern, responsive UI for both desktop and mobile
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/7d87371d-0e42-4e58-9c48-93b5748edb23) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+## Technologies Used
+- React (with functional components and hooks)
 - Vite
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- shadcn-ui
+- Lucide-react (icons)
+- React Router
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/7d87371d-0e42-4e58-9c48-93b5748edb23) and click on Share -> Publish.
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm or yarn
 
-## Can I connect a custom domain to my Lovable project?
+### Installation
+```sh
+# Clone the repository
+git clone <YOUR_GIT_URL>
+cd expiry-guard-alerts-now
 
-Yes, you can!
+# Install dependencies
+npm install
+# or
+yarn install
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Start the development server
+npm run dev
+# or
+yarn dev
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The app will be available at http://localhost:5173 (or the port shown in your terminal).
+
+## Project Structure
+- `src/pages/` — Main app pages (Dashboard, Inventory, Products, Categories, Users, Reports, Settings, Auth, etc.)
+- `src/components/` — Reusable UI components
+- `memory-bank/` — Project documentation and context
+
+## Deployment
+This project is ready to deploy on Vercel, Netlify, or any static hosting provider that supports React/Vite.
+
+### Deploying to Vercel
+1. Push your code to GitHub.
+2. Import your repo into Vercel: https://vercel.com/
+3. Set the build command to `npm run build` and the output directory to `dist`.
+4. Deploy!
+
+## Customization
+- Update branding, colors, and logo in `src/components/logo.tsx` and Tailwind config.
+- Add backend/API integration as needed for production use.
+
+## License
+MIT
