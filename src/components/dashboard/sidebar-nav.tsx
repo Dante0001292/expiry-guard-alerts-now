@@ -1,6 +1,6 @@
 
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BarChart3,
   Box,
@@ -66,6 +66,8 @@ const navItems: NavItem[] = [
 ];
 
 export function SidebarNav({ className }: SidebarNavProps) {
+  const location = useLocation();
+  
   return (
     <nav className={cn("flex flex-col gap-2 px-2", className)}>
       {navItems.map((item) => (
