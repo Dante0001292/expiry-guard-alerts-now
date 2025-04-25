@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Shopify, Package, CreditCard } from "lucide-react";
+import { Store, Package, CreditCard } from "lucide-react";
 
 export function AppIntegrations() {
   return (
@@ -12,7 +12,7 @@ export function AppIntegrations() {
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Button variant="outline" className="h-24 flex flex-col items-center justify-center gap-2">
-            <Shopify className="h-8 w-8" />
+            <Store className="h-8 w-8" />
             <span>Connect Shopify</span>
           </Button>
           <Button variant="outline" className="h-24 flex flex-col items-center justify-center gap-2">
