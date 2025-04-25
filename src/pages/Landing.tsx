@@ -5,6 +5,7 @@ import { FeatureSection } from "@/components/feature-section";
 import { PricingSection } from "@/components/pricing-section";
 import { CallToAction } from "@/components/call-to-action";
 import { Footer } from "@/components/footer";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Landing() {
   return (
@@ -13,6 +14,7 @@ export default function Landing() {
       <main className="pt-20">
         <HeroSection />
         <FeatureSection />
+        <Testimonials />
         <PricingSection />
         <CallToAction />
       </main>

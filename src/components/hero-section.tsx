@@ -25,7 +25,8 @@ export function HeroSection() {
           </h1>
           
           <p className="animate-fade-in animation-delay-100 text-xl md:text-2xl text-muted-foreground mb-10">
-            ExpiryGuard helps businesses track, manage, and get alerts for products before they expire.
+            ExpiryGuard is your automated expiry date management system. Track inventory, 
+            get timely alerts, and save thousands in potential losses from expired products.
           </p>
           
           <div className="animate-fade-in animation-delay-200 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -40,13 +41,13 @@ export function HeroSection() {
         
         <div className="flex-1 relative animate-fade-in">
           <img
-            src="/dashboard-preview.webp"
+            src="/dashboard-preview.png"
             alt="ExpiryGuard Dashboard"
             className="rounded-xl shadow-2xl border border-gray-200"
           />
           <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl border border-gray-100 animate-fade-in animation-delay-300">
             <img
-              src="/integrations-preview.webp"
+              src="/integrations-preview.png"
               alt="Integration Options"
               className="w-48 rounded"
             />
